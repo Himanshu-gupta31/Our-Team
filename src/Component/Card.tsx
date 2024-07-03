@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 interface CardProps{
-    image:string
+    image:string,
     name:string,
     title:string,
     description:string,
@@ -18,9 +18,9 @@ export const Card:React.FC<CardProps>=({
 })=>{
     return(
        <>
-       <div className='w-[20rem] h-[25rem] bg-white border border-gray-400 flex flex-col '>
+       <div className='w-[20rem] h-[30rem] bg-white border border-gray-400 flex flex-col '>
              <div className='h-1/2 bg-gray-800'>
-            {image}
+            <img src={image} className='h-full w-full object-cover'></img>
              </div>
              <div className='p-2 pl-4'>
              <h1 className='font-semibold mt-4 text-xl'>{name}</h1>
