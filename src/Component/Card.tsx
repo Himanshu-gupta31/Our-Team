@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 interface CardProps{
     image:string,
     name:string,
@@ -31,9 +31,9 @@ export const Card:React.FC<CardProps>=({
              <p className='mt-4 text-black'>{experience}</p>
              <div className='bg-gray-200 rounded-full w-[2rem] h-[2rem] flex justify-center items-center mt-4'>
              {socialLink ? (
-            //   <Link to={socialLink}>
-                socialicon
-            //   </Link>
+              <a href={socialLink}>
+                {socialicon}
+            </a>
             ) : (
               socialicon
             )}
